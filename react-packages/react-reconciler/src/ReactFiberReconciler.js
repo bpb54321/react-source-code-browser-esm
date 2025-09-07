@@ -12,59 +12,59 @@ import type {
   FiberRoot,
   SuspenseHydrationCallbacks,
   TransitionTracingCallbacks,
-} from './ReactInternalTypes';
-import type {RootTag} from './ReactRootTags';
+} from './ReactInternalTypes.js';
+import type {RootTag} from './ReactRootTags.js';
 import type {
   Container,
   PublicInstance,
   RendererInspectionConfig,
-} from './ReactFiberConfig';
-import type {ReactNodeList, ReactFormState} from 'shared/ReactTypes';
-import type {Lane} from './ReactFiberLane';
-import type {SuspenseState} from './ReactFiberSuspenseComponent';
+} from './ReactFiberConfig.js';
+import type {ReactNodeList, ReactFormState} from 'shared/ReactTypes.js';
+import type {Lane} from './ReactFiberLane.js';
+import type {SuspenseState} from './ReactFiberSuspenseComponent.js';
 
-import {LegacyRoot} from './ReactRootTags';
+import {LegacyRoot} from './ReactRootTags.js';
 import {
   findCurrentHostFiber,
   findCurrentHostFiberWithNoPortals,
-} from './ReactFiberTreeReflection';
-import {get as getInstance} from 'shared/ReactInstanceMap';
+} from './ReactFiberTreeReflection.js';
+import {get as getInstance} from 'shared/ReactInstanceMap.js';
 import {
   HostComponent,
   HostSingleton,
   ClassComponent,
   HostRoot,
   SuspenseComponent,
-} from './ReactWorkTags';
-import getComponentNameFromFiber from 'react-reconciler/src/getComponentNameFromFiber';
-import isArray from 'shared/isArray';
+} from './ReactWorkTags.js';
+import getComponentNameFromFiber from 'react-reconciler/src/getComponentNameFromFiber.js';
+import isArray from 'shared/isArray.js';
 import {
   enableSchedulingProfiler,
   enableHydrationLaneScheduling,
   disableLegacyMode,
-} from 'shared/ReactFeatureFlags';
-import ReactSharedInternals from 'shared/ReactSharedInternals';
+} from 'shared/ReactFeatureFlags.js';
+import ReactSharedInternals from 'shared/ReactSharedInternals.js';
 import {
   getPublicInstance,
   rendererVersion,
   rendererPackageName,
   extraDevToolsConfig,
-} from './ReactFiberConfig';
+} from './ReactFiberConfig.js';
 import {
   findCurrentUnmaskedContext,
   processChildContext,
   emptyContextObject,
   isContextProvider as isLegacyContextProvider,
-} from './ReactFiberContext';
-import {createFiberRoot} from './ReactFiberRoot';
-import {isRootDehydrated} from './ReactFiberShellHydration';
+} from './ReactFiberContext.js';
+import {createFiberRoot} from './ReactFiberRoot.js';
+import {isRootDehydrated} from './ReactFiberShellHydration.js';
 import {
   injectInternals,
   markRenderScheduled,
   onScheduleRoot,
   injectProfilingHooks,
-} from './ReactFiberDevToolsHook';
-import {startUpdateTimerByLane} from './ReactProfilerTimer';
+} from './ReactFiberDevToolsHook.js';
+import {startUpdateTimerByLane} from './ReactProfilerTimer.js';
 import {
   requestUpdateLane,
   scheduleUpdateOnFiber,
@@ -77,33 +77,33 @@ import {
   deferredUpdates,
   discreteUpdates,
   flushPendingEffects,
-} from './ReactFiberWorkLoop';
-import {enqueueConcurrentRenderForLane} from './ReactFiberConcurrentUpdates';
+} from './ReactFiberWorkLoop.js';
+import {enqueueConcurrentRenderForLane} from './ReactFiberConcurrentUpdates.js';
 import {
   createUpdate,
   enqueueUpdate,
   entangleTransitions,
-} from './ReactFiberClassUpdateQueue';
+} from './ReactFiberClassUpdateQueue.js';
 import {
   isRendering as ReactCurrentFiberIsRendering,
   current as ReactCurrentFiberCurrent,
   runWithFiberInDEV,
-} from './ReactCurrentFiber';
-import {StrictLegacyMode} from './ReactTypeOfMode';
+} from './ReactCurrentFiber.js';
+import {StrictLegacyMode} from './ReactTypeOfMode.js';
 import {
   SyncLane,
   SelectiveHydrationLane,
   getHighestPriorityPendingLanes,
   higherPriorityLane,
   getBumpedLaneForHydrationByLane,
-} from './ReactFiberLane';
+} from './ReactFiberLane.js';
 import {
   scheduleRefresh,
   scheduleRoot,
   setRefreshHandler,
-} from './ReactFiberHotReloading';
-import ReactVersion from 'shared/ReactVersion';
-export {createPortal} from './ReactPortal';
+} from './ReactFiberHotReloading.js';
+import ReactVersion from 'shared/ReactVersion.js';
+export {createPortal} from './ReactPortal.js';
 export {
   createComponentSelector,
   createHasPseudoClassSelector,
@@ -115,14 +115,14 @@ export {
   findBoundingRects,
   focusWithin,
   observeVisibleRects,
-} from './ReactTestSelectors';
-export {startHostTransition} from './ReactFiberHooks';
+} from './ReactTestSelectors.js';
+export {startHostTransition} from './ReactFiberHooks.js';
 export {
   defaultOnUncaughtError,
   defaultOnCaughtError,
   defaultOnRecoverableError,
-} from './ReactFiberErrorLogger';
-import {getLabelForLane, TotalLanes} from 'react-reconciler/src/ReactFiberLane';
+} from './ReactFiberErrorLogger.js';
+import {getLabelForLane, TotalLanes} from 'react-reconciler/src/ReactFiberLane.js';
 
 type OpaqueRoot = FiberRoot;
 

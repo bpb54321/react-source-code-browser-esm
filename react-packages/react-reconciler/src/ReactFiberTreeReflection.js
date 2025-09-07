@@ -7,9 +7,9 @@
  * @flow
  */
 
-import type {Fiber} from './ReactInternalTypes';
-import type {Container, SuspenseInstance, Instance} from './ReactFiberConfig';
-import type {SuspenseState} from './ReactFiberSuspenseComponent';
+import type {Fiber} from './ReactInternalTypes.js';
+import type {Container, SuspenseInstance, Instance} from './ReactFiberConfig.js';
+import type {SuspenseState} from './ReactFiberSuspenseComponent.js';
 
 import {
   HostComponent,
@@ -20,8 +20,8 @@ import {
   HostText,
   SuspenseComponent,
   OffscreenComponent,
-} from './ReactWorkTags';
-import {NoFlags, Placement, Hydrating} from './ReactFiberFlags';
+} from './ReactWorkTags.js';
+import {NoFlags, Placement, Hydrating} from './ReactFiberFlags.js';
 
 export function getNearestMountedFiber(fiber: Fiber): null | Fiber {
   let node = fiber;

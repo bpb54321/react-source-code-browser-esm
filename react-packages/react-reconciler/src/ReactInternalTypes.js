@@ -18,12 +18,12 @@ import type {
   ReactComponentInfo,
   ReactDebugInfo,
   StartGesture,
-} from 'shared/ReactTypes';
-import type {WorkTag} from './ReactWorkTags';
-import type {TypeOfMode} from './ReactTypeOfMode';
-import type {Flags} from './ReactFiberFlags';
-import type {Lane, Lanes, LaneMap} from './ReactFiberLane';
-import type {RootTag} from './ReactRootTags';
+} from 'shared/ReactTypes.js';
+import type {WorkTag} from './ReactWorkTags.js';
+import type {TypeOfMode} from './ReactTypeOfMode.js';
+import type {Flags} from './ReactFiberFlags.js';
+import type {Lane, Lanes, LaneMap} from './ReactFiberLane.js';
+import type {RootTag} from './ReactRootTags.js';
 import type {
   Container,
   Instance,
@@ -31,16 +31,16 @@ import type {
   NoTimeout,
   SuspenseInstance,
   TransitionStatus,
-} from './ReactFiberConfig';
-import type {Cache} from './ReactFiberCacheComponent';
+} from './ReactFiberConfig.js';
+import type {Cache} from './ReactFiberCacheComponent.js';
 import type {
   TracingMarkerInstance,
   Transition,
-} from './ReactFiberTracingMarkerComponent';
-import type {ConcurrentUpdate} from './ReactFiberConcurrentUpdates';
-import type {ComponentStackNode} from 'react-server/src/ReactFizzComponentStack';
-import type {ThenableState} from './ReactFiberThenable';
-import type {ScheduledGesture} from './ReactFiberGestureScheduler';
+} from './ReactFiberTracingMarkerComponent.js';
+import type {ConcurrentUpdate} from './ReactFiberConcurrentUpdates.js';
+import type {ComponentStackNode} from 'react-server/src/ReactFizzComponentStack.js';
+import type {ThenableState} from './ReactFiberThenable.js';
+import type {ScheduledGesture} from './ReactFiberGestureScheduler.js';
 
 // Unwind Circular: moved from ReactFiberHooks.old
 export type HookType =

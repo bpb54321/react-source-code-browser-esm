@@ -7,18 +7,18 @@
  * @flow
  */
 
-import type {ReactNodeList} from 'shared/ReactTypes';
-import type {FiberRoot} from './ReactInternalTypes';
-import type {ViewTransitionInstance, Instance} from './ReactFiberConfig';
+import type {ReactNodeList} from 'shared/ReactTypes.js';
+import type {FiberRoot} from './ReactInternalTypes.js';
+import type {ViewTransitionInstance, Instance} from './ReactFiberConfig.js';
 
 import {
   getWorkInProgressRoot,
   getPendingTransitionTypes,
-} from './ReactFiberWorkLoop';
+} from './ReactFiberWorkLoop.js';
 
-import {getIsHydrating} from './ReactFiberHydrationContext';
+import {getIsHydrating} from './ReactFiberHydrationContext.js';
 
-import {getTreeId} from './ReactFiberTreeContext';
+import {getTreeId} from './ReactFiberTreeContext.js';
 
 export type ViewTransitionClassPerType = {
   [transitionType: 'default' | string]: 'none' | string,

@@ -6,14 +6,14 @@
  *
  * @flow
  */
-import type {BatchConfigTransition} from 'react-reconciler/src/ReactFiberTracingMarkerComponent';
-import type {StartTransitionOptions} from 'shared/ReactTypes';
+import type {BatchConfigTransition} from 'react-reconciler/src/ReactFiberTracingMarkerComponent.js';
+import type {StartTransitionOptions} from 'shared/ReactTypes.js';
 
-import ReactSharedInternals from 'shared/ReactSharedInternals';
+import ReactSharedInternals from 'shared/ReactSharedInternals.js';
 
-import {enableTransitionTracing} from 'shared/ReactFeatureFlags';
+import {enableTransitionTracing} from 'shared/ReactFeatureFlags.js';
 
-import reportGlobalError from 'shared/reportGlobalError';
+import reportGlobalError from 'shared/reportGlobalError.js';
 
 export function startTransition(
   scope: () => void,

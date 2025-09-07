@@ -8,7 +8,7 @@ import {
   clientRenderBoundary,
   completeBoundary,
   completeSegment,
-} from './ReactDOMFizzInstructionSetShared';
+} from './ReactDOMFizzInstructionSetShared.js';
 
 export {clientRenderBoundary, completeBoundary, completeSegment};
 

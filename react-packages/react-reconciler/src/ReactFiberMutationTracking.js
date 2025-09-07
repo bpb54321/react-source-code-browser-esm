@@ -7,7 +7,7 @@
  * @flow
  */
 
-import {enableViewTransition} from 'shared/ReactFeatureFlags';
+import {enableViewTransition} from 'shared/ReactFeatureFlags.js';
 
 export let viewTransitionMutationContext: boolean = false;
 

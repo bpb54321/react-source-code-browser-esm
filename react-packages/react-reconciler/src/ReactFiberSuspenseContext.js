@@ -7,15 +7,15 @@
  * @flow
  */
 
-import type {Fiber} from './ReactInternalTypes';
-import type {StackCursor} from './ReactFiberStack';
-import type {SuspenseProps, SuspenseState} from './ReactFiberSuspenseComponent';
-import type {OffscreenState} from './ReactFiberActivityComponent';
+import type {Fiber} from './ReactInternalTypes.js';
+import type {StackCursor} from './ReactFiberStack.js';
+import type {SuspenseProps, SuspenseState} from './ReactFiberSuspenseComponent.js';
+import type {OffscreenState} from './ReactFiberActivityComponent.js';
 
-import {enableSuspenseAvoidThisFallback} from 'shared/ReactFeatureFlags';
-import {createCursor, push, pop} from './ReactFiberStack';
-import {isCurrentTreeHidden} from './ReactFiberHiddenContext';
-import {OffscreenComponent} from './ReactWorkTags';
+import {enableSuspenseAvoidThisFallback} from 'shared/ReactFeatureFlags.js';
+import {createCursor, push, pop} from './ReactFiberStack.js';
+import {isCurrentTreeHidden} from './ReactFiberHiddenContext.js';
+import {OffscreenComponent} from './ReactWorkTags.js';
 
 // The Suspense handler is the boundary that should capture if something
 // suspends, i.e. it's the nearest `catch` block on the stack.

@@ -7,16 +7,16 @@
  * @flow
  */
 
-import type {DOMEventName} from '../events/DOMEventNames';
-import type {Fiber, FiberRoot} from 'react-reconciler/src/ReactInternalTypes';
+import type {DOMEventName} from '../events/DOMEventNames.js';
+import type {Fiber, FiberRoot} from 'react-reconciler/src/ReactInternalTypes.js';
 import type {
   BoundingRect,
   IntersectionObserverOptions,
   ObserveVisibleRectsCallback,
-} from 'react-reconciler/src/ReactTestSelectors';
-import type {ReactContext, ReactScopeInstance} from 'shared/ReactTypes';
-import type {AncestorInfoDev} from './validateDOMNesting';
-import type {FormStatus} from 'react-dom-bindings/src/shared/ReactDOMFormActions';
+} from 'react-reconciler/src/ReactTestSelectors.js';
+import type {ReactContext, ReactScopeInstance} from 'shared/ReactTypes.js';
+import type {AncestorInfoDev} from './validateDOMNesting.js';
+import type {FormStatus} from 'react-dom-bindings/src/shared/ReactDOMFormActions.js';
 import type {
   CrossOriginEnum,
   PreloadImplOptions,
@@ -24,22 +24,22 @@ import type {
   PreinitStyleOptions,
   PreinitScriptOptions,
   PreinitModuleScriptOptions,
-} from 'react-dom/src/shared/ReactDOMTypes';
+} from 'react-dom/src/shared/ReactDOMTypes.js';
 import type {TransitionTypes} from 'react/src/ReactTransitionType.js';
 
-import {NotPending} from '../shared/ReactDOMFormActions';
+import {NotPending} from '../shared/ReactDOMFormActions.js';
 
-import {getCurrentRootHostContainer} from 'react-reconciler/src/ReactFiberHostContext';
+import {getCurrentRootHostContainer} from 'react-reconciler/src/ReactFiberHostContext.js';
 
-import hasOwnProperty from 'shared/hasOwnProperty';
-import {checkAttributeStringCoercion} from 'shared/CheckStringCoercion';
-import {REACT_CONTEXT_TYPE} from 'shared/ReactSymbols';
+import hasOwnProperty from 'shared/hasOwnProperty.js';
+import {checkAttributeStringCoercion} from 'shared/CheckStringCoercion.js';
+import {REACT_CONTEXT_TYPE} from 'shared/ReactSymbols.js';
 
 export {
   setCurrentUpdatePriority,
   getCurrentUpdatePriority,
   resolveUpdatePriority,
-} from './ReactDOMUpdatePriority';
+} from './ReactDOMUpdatePriority.js';
 import {
   precacheFiberNode,
   updateFiberProps,
@@ -52,11 +52,11 @@ import {
   isMarkedHoistable,
   markNodeAsHoistable,
   isOwnedInstance,
-} from './ReactDOMComponentTree';
-import {traverseFragmentInstance} from 'react-reconciler/src/ReactFiberTreeReflection';
+} from './ReactDOMComponentTree.js';
+import {traverseFragmentInstance} from 'react-reconciler/src/ReactFiberTreeReflection.js';
 
 export {detachDeletedInstance};
-import {hasRole} from './DOMAccessibilityRoles';
+import {hasRole} from './DOMAccessibilityRoles.js';
 import {
   setInitialProperties,
   updateProperties,
@@ -66,19 +66,19 @@ import {
   getPropsFromElement,
   diffHydratedText,
   trapClickOnNonInteractiveElement,
-} from './ReactDOMComponent';
-import {getSelectionInformation, restoreSelection} from './ReactInputSelection';
-import setTextContent from './setTextContent';
+} from './ReactDOMComponent.js';
+import {getSelectionInformation, restoreSelection} from './ReactInputSelection.js';
+import setTextContent from './setTextContent.js';
 import {
   validateDOMNesting,
   validateTextNesting,
   updatedAncestorInfoDev,
-} from './validateDOMNesting';
+} from './validateDOMNesting.js';
 import {
   isEnabled as ReactBrowserEventEmitterIsEnabled,
   setEnabled as ReactBrowserEventEmitterSetEnabled,
-} from '../events/ReactDOMEventListener';
-import {SVG_NAMESPACE, MATH_NAMESPACE} from './DOMNamespaces';
+} from '../events/ReactDOMEventListener.js';
+import {SVG_NAMESPACE, MATH_NAMESPACE} from './DOMNamespaces.js';
 import {
   ELEMENT_NODE,
   TEXT_NODE,
@@ -86,9 +86,9 @@ import {
   DOCUMENT_NODE,
   DOCUMENT_TYPE_NODE,
   DOCUMENT_FRAGMENT_NODE,
-} from './HTMLNodeType';
+} from './HTMLNodeType.js';
 
-import {retryIfBlockedOn} from '../events/ReactDOMEventReplaying';
+import {retryIfBlockedOn} from '../events/ReactDOMEventReplaying.js';
 
 import {
   enableCreateEventHandleAPI,
@@ -97,22 +97,22 @@ import {
   disableLegacyMode,
   enableMoveBefore,
   disableCommentsAsDOMContainers,
-} from 'shared/ReactFeatureFlags';
+} from 'shared/ReactFeatureFlags.js';
 import {
   HostComponent,
   HostHoistable,
   HostText,
   HostSingleton,
-} from 'react-reconciler/src/ReactWorkTags';
-import {listenToAllSupportedEvents} from '../events/DOMPluginEventSystem';
-import {validateLinkPropsForStyleResource} from '../shared/ReactDOMResourceValidation';
-import escapeSelectorAttributeValueInsideDoubleQuotes from './escapeSelectorAttributeValueInsideDoubleQuotes';
-import {flushSyncWork as flushSyncWorkOnAllRoots} from 'react-reconciler/src/ReactFiberWorkLoop';
-import {requestFormReset as requestFormResetOnFiber} from 'react-reconciler/src/ReactFiberHooks';
+} from 'react-reconciler/src/ReactWorkTags.js';
+import {listenToAllSupportedEvents} from '../events/DOMPluginEventSystem.js';
+import {validateLinkPropsForStyleResource} from '../shared/ReactDOMResourceValidation.js';
+import escapeSelectorAttributeValueInsideDoubleQuotes from './escapeSelectorAttributeValueInsideDoubleQuotes.js';
+import {flushSyncWork as flushSyncWorkOnAllRoots} from 'react-reconciler/src/ReactFiberWorkLoop.js';
+import {requestFormReset as requestFormResetOnFiber} from 'react-reconciler/src/ReactFiberHooks.js';
 
-import ReactDOMSharedInternals from 'shared/ReactDOMSharedInternals';
+import ReactDOMSharedInternals from 'shared/ReactDOMSharedInternals.js';
 
-export {default as rendererVersion} from 'shared/ReactVersion';
+export {default as rendererVersion} from 'shared/ReactVersion.js';
 export const rendererPackageName = 'react-dom';
 export const extraDevToolsConfig = null;
 
@@ -228,7 +228,7 @@ const HostContextNamespaceMath: HostContextNamespace = 2;
 let eventsEnabled: ?boolean = null;
 let selectionInformation: null | SelectionInformation = null;
 
-export * from 'react-reconciler/src/ReactFiberConfigWithNoPersistence';
+export * from 'react-reconciler/src/ReactFiberConfigWithNoPersistence.js';
 
 function getOwnerDocumentFromRootContainer(
   rootContainerElement: Element | Document | DocumentFragment,

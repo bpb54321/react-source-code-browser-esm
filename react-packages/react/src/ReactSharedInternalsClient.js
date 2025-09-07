@@ -7,10 +7,10 @@
  * @flow
  */
 
-import type {Dispatcher} from 'react-reconciler/src/ReactInternalTypes';
-import type {AsyncDispatcher} from 'react-reconciler/src/ReactInternalTypes';
-import type {BatchConfigTransition} from 'react-reconciler/src/ReactFiberTracingMarkerComponent';
-import type {TransitionTypes} from './ReactTransitionType';
+import type {Dispatcher} from 'react-reconciler/src/ReactInternalTypes.js';
+import type {AsyncDispatcher} from 'react-reconciler/src/ReactInternalTypes.js';
+import type {BatchConfigTransition} from 'react-reconciler/src/ReactFiberTracingMarkerComponent.js';
+import type {TransitionTypes} from './ReactTransitionType.js';
 
 export type SharedStateClient = {
   H: null | Dispatcher, // ReactCurrentDispatcher for Hooks

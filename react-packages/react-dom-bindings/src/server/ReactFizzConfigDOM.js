@@ -7,7 +7,7 @@
  * @flow
  */
 
-import type {ReactNodeList, ReactCustomFormAction} from 'shared/ReactTypes';
+import type {ReactNodeList, ReactCustomFormAction} from 'shared/ReactTypes.js';
 import type {
   CrossOriginEnum,
   PreloadImplOptions,
@@ -16,56 +16,56 @@ import type {
   PreinitScriptOptions,
   PreinitModuleScriptOptions,
   ImportMap,
-} from 'react-dom/src/shared/ReactDOMTypes';
+} from 'react-dom/src/shared/ReactDOMTypes.js';
 
 import {
   checkHtmlStringCoercion,
   checkCSSPropertyStringCoercion,
   checkAttributeStringCoercion,
   checkOptionStringCoercion,
-} from 'shared/CheckStringCoercion';
+} from 'shared/CheckStringCoercion.js';
 
 import {Children} from 'react';
 
-import {enableFizzExternalRuntime} from 'shared/ReactFeatureFlags';
+import {enableFizzExternalRuntime} from 'shared/ReactFeatureFlags.js';
 
 import type {
   Destination,
   Chunk,
   PrecomputedChunk,
-} from 'react-server/src/ReactServerStreamConfig';
+} from 'react-server/src/ReactServerStreamConfig.js';
 
-import type {FormStatus} from '../shared/ReactDOMFormActions';
+import type {FormStatus} from '../shared/ReactDOMFormActions.js';
 
 import {
   writeChunk,
   writeChunkAndReturn,
   stringToChunk,
   stringToPrecomputedChunk,
-} from 'react-server/src/ReactServerStreamConfig';
+} from 'react-server/src/ReactServerStreamConfig.js';
 import {
   resolveRequest,
   getResumableState,
   getRenderState,
   flushResources,
-} from 'react-server/src/ReactFizzServer';
+} from 'react-server/src/ReactFizzServer.js';
 
-import isAttributeNameSafe from '../shared/isAttributeNameSafe';
-import isUnitlessNumber from '../shared/isUnitlessNumber';
-import getAttributeAlias from '../shared/getAttributeAlias';
+import isAttributeNameSafe from '../shared/isAttributeNameSafe.js';
+import isUnitlessNumber from '../shared/isUnitlessNumber.js';
+import getAttributeAlias from '../shared/getAttributeAlias.js';
 
-import {checkControlledValueProps} from '../shared/ReactControlledValuePropTypes';
-import {validateProperties as validateARIAProperties} from '../shared/ReactDOMInvalidARIAHook';
-import {validateProperties as validateInputProperties} from '../shared/ReactDOMNullInputValuePropHook';
-import {validateProperties as validateUnknownProperties} from '../shared/ReactDOMUnknownPropertyHook';
-import warnValidStyle from '../shared/warnValidStyle';
-import {getCrossOriginString} from '../shared/crossOriginStrings';
+import {checkControlledValueProps} from '../shared/ReactControlledValuePropTypes.js';
+import {validateProperties as validateARIAProperties} from '../shared/ReactDOMInvalidARIAHook.js';
+import {validateProperties as validateInputProperties} from '../shared/ReactDOMNullInputValuePropHook.js';
+import {validateProperties as validateUnknownProperties} from '../shared/ReactDOMUnknownPropertyHook.js';
+import warnValidStyle from '../shared/warnValidStyle.js';
+import {getCrossOriginString} from '../shared/crossOriginStrings.js';
 
-import escapeTextForBrowser from './escapeTextForBrowser';
-import hyphenateStyleName from '../shared/hyphenateStyleName';
-import hasOwnProperty from 'shared/hasOwnProperty';
-import sanitizeURL from '../shared/sanitizeURL';
-import isArray from 'shared/isArray';
+import escapeTextForBrowser from './escapeTextForBrowser.js';
+import hyphenateStyleName from '../shared/hyphenateStyleName.js';
+import hasOwnProperty from 'shared/hasOwnProperty.js';
+import sanitizeURL from '../shared/sanitizeURL.js';
+import isArray from 'shared/isArray.js';
 
 import {
   clientRenderBoundary as clientRenderFunction,
@@ -73,13 +73,13 @@ import {
   completeBoundaryWithStyles as styleInsertionFunction,
   completeSegment as completeSegmentFunction,
   formReplaying as formReplayingRuntime,
-} from './fizz-instruction-set/ReactDOMFizzInstructionSetInlineCodeStrings';
+} from './fizz-instruction-set/ReactDOMFizzInstructionSetInlineCodeStrings.js';
 
-import {getValueDescriptorExpectingObjectForWarning} from '../shared/ReactDOMResourceValidation';
+import {getValueDescriptorExpectingObjectForWarning} from '../shared/ReactDOMResourceValidation.js';
 
-import {NotPending} from '../shared/ReactDOMFormActions';
+import {NotPending} from '../shared/ReactDOMFormActions.js';
 
-import ReactDOMSharedInternals from 'shared/ReactDOMSharedInternals';
+import ReactDOMSharedInternals from 'shared/ReactDOMSharedInternals.js';
 
 const previousDispatcher =
   ReactDOMSharedInternals.d; /* ReactDOMCurrentDispatcher */
@@ -3669,7 +3669,7 @@ function startChunkForTag(tag: string): PrecomputedChunk {
 export const doctypeChunk: PrecomputedChunk =
   stringToPrecomputedChunk('<!DOCTYPE html>');
 
-import {doctypeChunk as DOCTYPE} from 'react-server/src/ReactFizzConfig';
+import {doctypeChunk as DOCTYPE} from 'react-server/src/ReactFizzConfig.js';
 
 export function pushStartInstance(
   target: Array<Chunk | PrecomputedChunk>,

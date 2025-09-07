@@ -7,11 +7,11 @@
  * @flow
  */
 
-import isArray from 'shared/isArray';
+import isArray from 'shared/isArray.js';
 
-import {getCurrentFiberOwnerNameInDevOrNull} from 'react-reconciler/src/ReactCurrentFiber';
-import {getToStringValue, toString} from './ToStringValue';
-import {disableTextareaChildren} from 'shared/ReactFeatureFlags';
+import {getCurrentFiberOwnerNameInDevOrNull} from 'react-reconciler/src/ReactCurrentFiber.js';
+import {getToStringValue, toString} from './ToStringValue.js';
+import {disableTextareaChildren} from 'shared/ReactFeatureFlags.js';
 
 let didWarnValDefaultVal = false;
 

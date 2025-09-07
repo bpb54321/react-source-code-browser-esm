@@ -12,11 +12,11 @@ import type {
   PendingThenable,
   FulfilledThenable,
   RejectedThenable,
-} from 'shared/ReactTypes';
+} from 'shared/ReactTypes.js';
 
-import {getWorkInProgressRoot} from './ReactFiberWorkLoop';
+import {getWorkInProgressRoot} from './ReactFiberWorkLoop.js';
 
-import ReactSharedInternals from 'shared/ReactSharedInternals';
+import ReactSharedInternals from 'shared/ReactSharedInternals.js';
 
 opaque type ThenableStateDev = {
   didWarnAboutUncachedPromise: boolean,

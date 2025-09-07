@@ -7,22 +7,22 @@
  * @flow
  */
 
-import type {FiberRoot} from './ReactInternalTypes';
+import type {FiberRoot} from './ReactInternalTypes.js';
 import type {
   GestureTimeline,
   RunningGestureTransition,
-} from './ReactFiberConfig';
+} from './ReactFiberConfig.js';
 
 import {
   GestureLane,
   includesBlockingLane,
   includesTransitionLane,
-} from './ReactFiberLane';
-import {ensureRootIsScheduled} from './ReactFiberRootScheduler';
+} from './ReactFiberLane.js';
+import {ensureRootIsScheduled} from './ReactFiberRootScheduler.js';
 import {
   subscribeToGestureDirection,
   stopGestureTransition,
-} from './ReactFiberConfig';
+} from './ReactFiberConfig.js';
 
 // This type keeps track of any scheduled or active gestures.
 export type ScheduledGesture = {

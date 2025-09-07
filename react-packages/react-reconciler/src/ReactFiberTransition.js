@@ -6,32 +6,32 @@
  *
  * @flow
  */
-import type {Fiber, FiberRoot} from './ReactInternalTypes';
-import type {Thenable} from 'shared/ReactTypes';
-import type {Lanes} from './ReactFiberLane';
-import type {StackCursor} from './ReactFiberStack';
-import type {Cache, SpawnedCachePool} from './ReactFiberCacheComponent';
+import type {Fiber, FiberRoot} from './ReactInternalTypes.js';
+import type {Thenable} from 'shared/ReactTypes.js';
+import type {Lanes} from './ReactFiberLane.js';
+import type {StackCursor} from './ReactFiberStack.js';
+import type {Cache, SpawnedCachePool} from './ReactFiberCacheComponent.js';
 import type {
   BatchConfigTransition,
   Transition,
-} from './ReactFiberTracingMarkerComponent';
+} from './ReactFiberTracingMarkerComponent.js';
 
-import {enableTransitionTracing} from 'shared/ReactFeatureFlags';
-import {isPrimaryRenderer} from './ReactFiberConfig';
-import {createCursor, push, pop} from './ReactFiberStack';
+import {enableTransitionTracing} from 'shared/ReactFeatureFlags.js';
+import {isPrimaryRenderer} from './ReactFiberConfig.js';
+import {createCursor, push, pop} from './ReactFiberStack.js';
 import {
   getWorkInProgressRoot,
   getWorkInProgressTransitions,
-} from './ReactFiberWorkLoop';
+} from './ReactFiberWorkLoop.js';
 import {
   createCache,
   retainCache,
   CacheContext,
-} from './ReactFiberCacheComponent';
+} from './ReactFiberCacheComponent.js';
 
-import ReactSharedInternals from 'shared/ReactSharedInternals';
-import {entangleAsyncAction} from './ReactFiberAsyncAction';
-import {startAsyncTransitionTimer} from './ReactProfilerTimer';
+import ReactSharedInternals from 'shared/ReactSharedInternals.js';
+import {entangleAsyncAction} from './ReactFiberAsyncAction.js';
+import {startAsyncTransitionTimer} from './ReactProfilerTimer.js';
 
 export const NoTransition = null;
 

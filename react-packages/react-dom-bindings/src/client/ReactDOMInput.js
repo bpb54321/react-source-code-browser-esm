@@ -8,17 +8,17 @@
  */
 
 // TODO: direct imports like some-package/src/* are bad. Fix me.
-import {getCurrentFiberOwnerNameInDevOrNull} from 'react-reconciler/src/ReactCurrentFiber';
+import {getCurrentFiberOwnerNameInDevOrNull} from 'react-reconciler/src/ReactCurrentFiber.js';
 
-import {getFiberCurrentPropsFromNode} from './ReactDOMComponentTree';
-import {getToStringValue, toString} from './ToStringValue';
-import {updateValueIfChanged} from './inputValueTracking';
-import getActiveElement from './getActiveElement';
-import {disableInputAttributeSyncing} from 'shared/ReactFeatureFlags';
-import {checkAttributeStringCoercion} from 'shared/CheckStringCoercion';
+import {getFiberCurrentPropsFromNode} from './ReactDOMComponentTree.js';
+import {getToStringValue, toString} from './ToStringValue.js';
+import {updateValueIfChanged} from './inputValueTracking.js';
+import getActiveElement from './getActiveElement.js';
+import {disableInputAttributeSyncing} from 'shared/ReactFeatureFlags.js';
+import {checkAttributeStringCoercion} from 'shared/CheckStringCoercion.js';
 
-import type {ToStringValue} from './ToStringValue';
-import escapeSelectorAttributeValueInsideDoubleQuotes from './escapeSelectorAttributeValueInsideDoubleQuotes';
+import type {ToStringValue} from './ToStringValue.js';
+import escapeSelectorAttributeValueInsideDoubleQuotes from './escapeSelectorAttributeValueInsideDoubleQuotes.js';
 
 let didWarnValueDefaultValue = false;
 let didWarnCheckedDefaultChecked = false;

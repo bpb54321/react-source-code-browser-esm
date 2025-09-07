@@ -8,10 +8,10 @@
  */
 
 // TODO: direct imports like some-package/src/* are bad. Fix me.
-import {getCurrentFiberOwnerNameInDevOrNull} from 'react-reconciler/src/ReactCurrentFiber';
+import {getCurrentFiberOwnerNameInDevOrNull} from 'react-reconciler/src/ReactCurrentFiber.js';
 
-import {getToStringValue, toString} from './ToStringValue';
-import isArray from 'shared/isArray';
+import {getToStringValue, toString} from './ToStringValue.js';
+import isArray from 'shared/isArray.js';
 
 let didWarnValueDefaultValue;
 

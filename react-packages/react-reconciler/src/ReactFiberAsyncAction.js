@@ -11,20 +11,20 @@ import type {
   Thenable,
   FulfilledThenable,
   RejectedThenable,
-} from 'shared/ReactTypes';
-import type {Lane} from './ReactFiberLane';
-import type {BatchConfigTransition} from './ReactFiberTracingMarkerComponent';
+} from 'shared/ReactTypes.js';
+import type {Lane} from './ReactFiberLane.js';
+import type {BatchConfigTransition} from './ReactFiberTracingMarkerComponent.js';
 
-import {requestTransitionLane} from './ReactFiberRootScheduler';
-import {NoLane} from './ReactFiberLane';
+import {requestTransitionLane} from './ReactFiberRootScheduler.js';
+import {NoLane} from './ReactFiberLane.js';
 import {
   hasScheduledTransitionWork,
   clearAsyncTransitionTimer,
-} from './ReactProfilerTimer';
+} from './ReactProfilerTimer.js';
 import {
   enableComponentPerformanceTrack,
   enableProfilerTimer,
-} from 'shared/ReactFeatureFlags';
+} from 'shared/ReactFeatureFlags.js';
 
 // If there are multiple, concurrent async actions, they are entangled. All
 // transition updates that occur while the async action is still in progress

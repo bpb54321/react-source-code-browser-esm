@@ -7,37 +7,37 @@
  * @flow
  */
 
-import type {EventPriority} from 'react-reconciler/src/ReactEventPriorities';
-import type {AnyNativeEvent} from '../events/PluginModuleType';
-import type {Fiber, FiberRoot} from 'react-reconciler/src/ReactInternalTypes';
-import type {Container, SuspenseInstance} from '../client/ReactFiberConfigDOM';
-import type {DOMEventName} from '../events/DOMEventNames';
+import type {EventPriority} from 'react-reconciler/src/ReactEventPriorities.js';
+import type {AnyNativeEvent} from '../events/PluginModuleType.js';
+import type {Fiber, FiberRoot} from 'react-reconciler/src/ReactInternalTypes.js';
+import type {Container, SuspenseInstance} from '../client/ReactFiberConfigDOM.js';
+import type {DOMEventName} from '../events/DOMEventNames.js';
 
 import {
   isDiscreteEventThatRequiresHydration,
   clearIfContinuousEvent,
   queueIfContinuousEvent,
-} from './ReactDOMEventReplaying';
-import {attemptSynchronousHydration} from 'react-reconciler/src/ReactFiberReconciler';
+} from './ReactDOMEventReplaying.js';
+import {attemptSynchronousHydration} from 'react-reconciler/src/ReactFiberReconciler.js';
 import {
   getNearestMountedFiber,
   getContainerFromFiber,
   getSuspenseInstanceFromFiber,
-} from 'react-reconciler/src/ReactFiberTreeReflection';
-import {HostRoot, SuspenseComponent} from 'react-reconciler/src/ReactWorkTags';
-import {type EventSystemFlags, IS_CAPTURE_PHASE} from './EventSystemFlags';
+} from 'react-reconciler/src/ReactFiberTreeReflection.js';
+import {HostRoot, SuspenseComponent} from 'react-reconciler/src/ReactWorkTags.js';
+import {type EventSystemFlags, IS_CAPTURE_PHASE} from './EventSystemFlags.js';
 
-import getEventTarget from './getEventTarget';
+import getEventTarget from './getEventTarget.js';
 import {
   getInstanceFromNode,
   getClosestInstanceFromNode,
-} from '../client/ReactDOMComponentTree';
+} from '../client/ReactDOMComponentTree.js';
 
-import {dispatchEventForPluginEventSystem} from './DOMPluginEventSystem';
+import {dispatchEventForPluginEventSystem} from './DOMPluginEventSystem.js';
 import {
   getCurrentUpdatePriority,
   setCurrentUpdatePriority,
-} from '../client/ReactDOMUpdatePriority';
+} from '../client/ReactDOMUpdatePriority.js';
 
 import {
   getCurrentPriorityLevel as getCurrentSchedulerPriorityLevel,
@@ -46,15 +46,15 @@ import {
   LowPriority as LowSchedulerPriority,
   NormalPriority as NormalSchedulerPriority,
   UserBlockingPriority as UserBlockingSchedulerPriority,
-} from 'react-reconciler/src/Scheduler';
+} from 'react-reconciler/src/Scheduler.js';
 import {
   DiscreteEventPriority,
   ContinuousEventPriority,
   DefaultEventPriority,
   IdleEventPriority,
-} from 'react-reconciler/src/ReactEventPriorities';
-import ReactSharedInternals from 'shared/ReactSharedInternals';
-import {isRootDehydrated} from 'react-reconciler/src/ReactFiberShellHydration';
+} from 'react-reconciler/src/ReactEventPriorities.js';
+import ReactSharedInternals from 'shared/ReactSharedInternals.js';
+import {isRootDehydrated} from 'react-reconciler/src/ReactFiberShellHydration.js';
 
 // TODO: can we stop exporting these?
 let _enabled: boolean = true;

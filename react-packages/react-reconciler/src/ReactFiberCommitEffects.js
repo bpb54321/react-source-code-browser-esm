@@ -7,16 +7,16 @@
  * @flow
  */
 
-import type {Fiber} from './ReactInternalTypes';
-import type {UpdateQueue} from './ReactFiberClassUpdateQueue';
-import type {FunctionComponentUpdateQueue} from './ReactFiberHooks';
-import type {HookFlags} from './ReactHookEffectTags';
-import type {FragmentInstanceType} from './ReactFiberConfig';
+import type {Fiber} from './ReactInternalTypes.js';
+import type {UpdateQueue} from './ReactFiberClassUpdateQueue.js';
+import type {FunctionComponentUpdateQueue} from './ReactFiberHooks.js';
+import type {HookFlags} from './ReactHookEffectTags.js';
+import type {FragmentInstanceType} from './ReactFiberConfig.js';
 import {
   getViewTransitionName,
   type ViewTransitionState,
   type ViewTransitionProps,
-} from './ReactFiberViewTransitionComponent';
+} from './ReactFiberViewTransitionComponent.js';
 
 import {
   enableProfilerTimer,
@@ -26,7 +26,7 @@ import {
   enableUseEffectCRUDOverload,
   enableViewTransition,
   enableFragmentRefs,
-} from 'shared/ReactFeatureFlags';
+} from 'shared/ReactFeatureFlags.js';
 import {
   ClassComponent,
   Fragment,
@@ -34,37 +34,37 @@ import {
   HostHoistable,
   HostSingleton,
   ViewTransitionComponent,
-} from './ReactWorkTags';
-import {NoFlags} from './ReactFiberFlags';
-import getComponentNameFromFiber from 'react-reconciler/src/getComponentNameFromFiber';
-import {resolveClassComponentProps} from './ReactFiberClassComponent';
+} from './ReactWorkTags.js';
+import {NoFlags} from './ReactFiberFlags.js';
+import getComponentNameFromFiber from 'react-reconciler/src/getComponentNameFromFiber.js';
+import {resolveClassComponentProps} from './ReactFiberClassComponent.js';
 import {
   recordEffectDuration,
   startEffectTimer,
   isCurrentUpdateNested,
-} from './ReactProfilerTimer';
-import {NoMode, ProfileMode} from './ReactTypeOfMode';
+} from './ReactProfilerTimer.js';
+import {NoMode, ProfileMode} from './ReactTypeOfMode.js';
 import {
   commitCallbacks,
   commitHiddenCallbacks,
-} from './ReactFiberClassUpdateQueue';
+} from './ReactFiberClassUpdateQueue.js';
 import {
   getPublicInstance,
   createViewTransitionInstance,
   createFragmentInstance,
-} from './ReactFiberConfig';
+} from './ReactFiberConfig.js';
 import {
   captureCommitPhaseError,
   setIsRunningInsertionEffect,
-} from './ReactFiberWorkLoop';
+} from './ReactFiberWorkLoop.js';
 import {
   NoFlags as NoHookEffect,
   Layout as HookLayout,
   Insertion as HookInsertion,
   Passive as HookPassive,
   HasEffect as HookHasEffect,
-} from './ReactHookEffectTags';
-import {didWarnAboutReassigningProps} from './ReactFiberBeginWork';
+} from './ReactHookEffectTags.js';
+import {didWarnAboutReassigningProps} from './ReactFiberBeginWork.js';
 import {
   markComponentPassiveEffectMountStarted,
   markComponentPassiveEffectMountStopped,
@@ -74,20 +74,20 @@ import {
   markComponentLayoutEffectMountStopped,
   markComponentLayoutEffectUnmountStarted,
   markComponentLayoutEffectUnmountStopped,
-} from './ReactFiberDevToolsHook';
+} from './ReactFiberDevToolsHook.js';
 import {
   callComponentDidMountInDEV,
   callComponentDidUpdateInDEV,
   callComponentWillUnmountInDEV,
   callCreateInDEV,
   callDestroyInDEV,
-} from './ReactFiberCallUserSpace';
+} from './ReactFiberCallUserSpace.js';
 
-import {runWithFiberInDEV} from './ReactCurrentFiber';
+import {runWithFiberInDEV} from './ReactCurrentFiber.js';
 import {
   ResourceEffectIdentityKind,
   ResourceEffectUpdateKind,
-} from './ReactFiberHooks';
+} from './ReactFiberHooks.js';
 
 function shouldProfile(current: Fiber): boolean {
   return (

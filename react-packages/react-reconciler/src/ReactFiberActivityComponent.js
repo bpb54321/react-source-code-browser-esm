@@ -7,14 +7,14 @@
  * @flow
  */
 
-import type {ReactNodeList, OffscreenMode, Wakeable} from 'shared/ReactTypes';
-import type {Lanes} from './ReactFiberLane';
-import type {SpawnedCachePool} from './ReactFiberCacheComponent';
+import type {ReactNodeList, OffscreenMode, Wakeable} from 'shared/ReactTypes.js';
+import type {Lanes} from './ReactFiberLane.js';
+import type {SpawnedCachePool} from './ReactFiberCacheComponent.js';
 import type {
   Transition,
   TracingMarkerInstance,
-} from './ReactFiberTracingMarkerComponent';
-import type {RetryQueue} from './ReactFiberSuspenseComponent';
+} from './ReactFiberTracingMarkerComponent.js';
+import type {RetryQueue} from './ReactFiberSuspenseComponent.js';
 
 export type OffscreenProps = {
   // TODO: Pick an API before exposing the Offscreen type. I've chosen an enum

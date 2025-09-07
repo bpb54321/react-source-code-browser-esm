@@ -7,7 +7,7 @@ import {
   completeBoundary,
   completeSegment,
   listenToFormSubmissionsForReplaying,
-} from './ReactDOMFizzInstructionSetShared';
+} from './ReactDOMFizzInstructionSetShared.js';
 
 export {clientRenderBoundary, completeBoundary, completeSegment};
 
