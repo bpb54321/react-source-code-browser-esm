@@ -18,7 +18,7 @@ import type {
   Container,
   PublicInstance,
   RendererInspectionConfig,
-} from './ReactFiberConfig.js';
+} from './forks/ReactFiberConfig.dom.js';
 import type {ReactNodeList, ReactFormState} from 'shared/ReactTypes.js';
 import type {Lane} from './ReactFiberLane.js';
 import type {SuspenseState} from './ReactFiberSuspenseComponent.js';
@@ -49,7 +49,7 @@ import {
   rendererVersion,
   rendererPackageName,
   extraDevToolsConfig,
-} from './ReactFiberConfig.js';
+} from './forks/ReactFiberConfig.dom.js';
 import {
   findCurrentUnmaskedContext,
   processChildContext,

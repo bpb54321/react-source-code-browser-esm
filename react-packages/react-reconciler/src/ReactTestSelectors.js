@@ -8,7 +8,7 @@
  */
 
 import type {Fiber} from 'react-reconciler/src/ReactInternalTypes.js';
-import type {Instance} from './ReactFiberConfig.js';
+import type {Instance} from './forks/ReactFiberConfig.dom.js';
 
 import {
   HostComponent,
@@ -27,7 +27,7 @@ import {
   setFocusIfFocusable,
   setupIntersectionObserver,
   supportsTestSelectors,
-} from './ReactFiberConfig.js';
+} from './forks/ReactFiberConfig.dom.js';
 
 let COMPONENT_TYPE: symbol | number = 0b000;
 let HAS_PSEUDO_CLASS_TYPE: symbol | number = 0b001;

@@ -9,7 +9,7 @@
 
 import type {ReactNodeList} from 'shared/ReactTypes.js';
 import type {FiberRoot} from './ReactInternalTypes.js';
-import type {ViewTransitionInstance, Instance} from './ReactFiberConfig.js';
+import type {ViewTransitionInstance, Instance} from './forks/ReactFiberConfig.dom.js';
 
 import {
   getWorkInProgressRoot,

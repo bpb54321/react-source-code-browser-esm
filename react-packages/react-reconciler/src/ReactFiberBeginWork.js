@@ -180,8 +180,8 @@ import {
   getResource,
   createHoistableInstance,
   HostTransitionContext,
-} from './ReactFiberConfig.js';
-import type {SuspenseInstance} from './ReactFiberConfig.js';
+} from './forks/ReactFiberConfig.dom.js';
+import type {SuspenseInstance} from './forks/ReactFiberConfig.dom.js';
 import {shouldError, shouldSuspend} from './ReactFiberReconciler.js';
 import {
   pushHostContext,

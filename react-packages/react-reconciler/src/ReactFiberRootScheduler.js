@@ -72,7 +72,7 @@ import {
   shouldAttemptEagerTransition,
   trackSchedulerEvent,
   noTimeout,
-} from './ReactFiberConfig.js';
+} from './forks/ReactFiberConfig.dom.js';
 
 import ReactSharedInternals from 'shared/ReactSharedInternals.js';
 import {

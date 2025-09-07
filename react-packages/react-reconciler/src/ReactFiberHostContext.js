@@ -9,7 +9,7 @@
 
 import type {Fiber} from './ReactInternalTypes.js';
 import type {StackCursor} from './ReactFiberStack.js';
-import type {Container, HostContext} from './ReactFiberConfig.js';
+import type {Container, HostContext} from './forks/ReactFiberConfig.dom.js';
 import type {Hook} from './ReactFiberHooks.js';
 
 import {
@@ -18,7 +18,7 @@ import {
   HostTransitionContext,
   NotPendingTransition,
   isPrimaryRenderer,
-} from './ReactFiberConfig.js';
+} from './forks/ReactFiberConfig.dom.js';
 import {createCursor, push, pop} from './ReactFiberStack.js';
 
 const contextStackCursor: StackCursor<HostContext | null> = createCursor(null);

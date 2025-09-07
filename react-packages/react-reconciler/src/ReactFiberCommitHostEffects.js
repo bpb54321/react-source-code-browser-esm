@@ -14,7 +14,7 @@ import type {
   Container,
   ChildSet,
   FragmentInstanceType,
-} from './ReactFiberConfig.js';
+} from './forks/ReactFiberConfig.dom.js';
 import type {Fiber, FiberRoot} from './ReactInternalTypes.js';
 
 import {
@@ -54,7 +54,7 @@ import {
   isSingletonScope,
   commitNewChildToFragmentInstance,
   deleteChildFromFragmentInstance,
-} from './ReactFiberConfig.js';
+} from './forks/ReactFiberConfig.dom.js';
 import {captureCommitPhaseError} from './ReactFiberWorkLoop.js';
 import {trackHostMutation} from './ReactFiberMutationTracking.js';
 

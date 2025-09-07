@@ -15,10 +15,10 @@ import type {
 } from './ReactInternalTypes.js';
 import type {StackCursor} from './ReactFiberStack.js';
 import type {Lanes} from './ReactFiberLane.js';
-import type {TransitionStatus} from './ReactFiberConfig.js';
+import type {TransitionStatus} from './forks/ReactFiberConfig.dom.js';
 import type {Hook} from './ReactFiberHooks.js';
 
-import {isPrimaryRenderer, HostTransitionContext} from './ReactFiberConfig.js';
+import {isPrimaryRenderer, HostTransitionContext} from './forks/ReactFiberConfig.dom.js';
 import {createCursor, push, pop} from './ReactFiberStack.js';
 import {ContextProvider, DehydratedFragment} from './ReactWorkTags.js';
 import {NoLanes, isSubsetOfLanes, mergeLanes} from './ReactFiberLane.js';

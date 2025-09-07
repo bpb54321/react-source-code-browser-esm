@@ -18,7 +18,7 @@ import reportGlobalError from 'shared/reportGlobalError.js';
 
 import ReactSharedInternals from 'shared/ReactSharedInternals.js';
 
-import {bindToConsole} from './ReactFiberConfig.js';
+import {bindToConsole} from './forks/ReactFiberConfig.dom.js';
 
 // Side-channel since I'm not sure we want to make this part of the public API
 let componentName: null | string = null;

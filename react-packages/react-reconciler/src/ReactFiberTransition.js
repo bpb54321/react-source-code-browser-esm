@@ -17,7 +17,7 @@ import type {
 } from './ReactFiberTracingMarkerComponent.js';
 
 import {enableTransitionTracing} from 'shared/ReactFeatureFlags.js';
-import {isPrimaryRenderer} from './ReactFiberConfig.js';
+import {isPrimaryRenderer} from './forks/ReactFiberConfig.dom.js';
 import {createCursor, push, pop} from './ReactFiberStack.js';
 import {
   getWorkInProgressRoot,

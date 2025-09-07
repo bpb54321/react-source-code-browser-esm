@@ -21,7 +21,7 @@ import type {
   TransitionAbort,
 } from './ReactFiberTracingMarkerComponent.js';
 import type {OffscreenInstance} from './ReactFiberActivityComponent.js';
-import type {Resource, ViewTransitionInstance} from './ReactFiberConfig.js';
+import type {Resource, ViewTransitionInstance} from './forks/ReactFiberConfig.dom.js';
 import type {RootState} from './ReactFiberRoot.js';
 import {
   getViewTransitionName,
@@ -103,7 +103,7 @@ import {
   startViewTransition,
   startGestureTransition,
   createViewTransitionInstance,
-} from './ReactFiberConfig.js';
+} from './forks/ReactFiberConfig.dom.js';
 
 import {createWorkInProgress, resetWorkInProgress} from './ReactFiber.js';
 import {isRootDehydrated} from './ReactFiberShellHydration.js';

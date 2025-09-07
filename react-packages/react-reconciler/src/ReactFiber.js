@@ -14,7 +14,7 @@ import type {RootTag} from './ReactRootTags.js';
 import type {WorkTag} from './ReactWorkTags.js';
 import type {TypeOfMode} from './ReactTypeOfMode.js';
 import type {Lanes} from './ReactFiberLane.js';
-import type {SuspenseInstance} from './ReactFiberConfig.js';
+import type {SuspenseInstance} from './forks/ReactFiberConfig.dom.js';
 import type {
   OffscreenProps,
   OffscreenInstance,
@@ -30,7 +30,7 @@ import {
   supportsSingletons,
   isHostHoistableType,
   isHostSingletonType,
-} from './ReactFiberConfig.js';
+} from './forks/ReactFiberConfig.dom.js';
 import {
   enableProfilerTimer,
   enableScopeAPI,

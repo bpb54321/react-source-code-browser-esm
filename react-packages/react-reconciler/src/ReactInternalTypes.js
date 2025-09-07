@@ -31,7 +31,7 @@ import type {
   NoTimeout,
   SuspenseInstance,
   TransitionStatus,
-} from './ReactFiberConfig.js';
+} from './forks/ReactFiberConfig.dom.js';
 import type {Cache} from './ReactFiberCacheComponent.js';
 import type {
   TracingMarkerInstance,

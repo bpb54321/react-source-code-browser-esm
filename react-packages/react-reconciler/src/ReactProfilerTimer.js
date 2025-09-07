@@ -24,7 +24,7 @@ import {
   includesSyncLane,
 } from './ReactFiberLane.js';
 
-import {resolveEventType, resolveEventTimeStamp} from './ReactFiberConfig.js';
+import {resolveEventType, resolveEventTimeStamp} from './forks/ReactFiberConfig.dom.js';
 
 import {
   enableProfilerCommitHooks,

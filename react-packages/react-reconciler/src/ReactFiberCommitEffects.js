@@ -11,7 +11,7 @@ import type {Fiber} from './ReactInternalTypes.js';
 import type {UpdateQueue} from './ReactFiberClassUpdateQueue.js';
 import type {FunctionComponentUpdateQueue} from './ReactFiberHooks.js';
 import type {HookFlags} from './ReactHookEffectTags.js';
-import type {FragmentInstanceType} from './ReactFiberConfig.js';
+import type {FragmentInstanceType} from './forks/ReactFiberConfig.dom.js';
 import {
   getViewTransitionName,
   type ViewTransitionState,
@@ -52,7 +52,7 @@ import {
   getPublicInstance,
   createViewTransitionInstance,
   createFragmentInstance,
-} from './ReactFiberConfig.js';
+} from './forks/ReactFiberConfig.dom.js';
 import {
   captureCommitPhaseError,
   setIsRunningInsertionEffect,

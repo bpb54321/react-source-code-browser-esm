@@ -11,7 +11,7 @@ import type {Fiber} from './ReactFiber.js';
 
 import ReactSharedInternals from 'shared/ReactSharedInternals.js';
 
-import {warnsIfNotActing} from './ReactFiberConfig.js';
+import {warnsIfNotActing} from './forks/ReactFiberConfig.dom.js';
 
 export function isLegacyActEnvironment(fiber: Fiber): boolean {
   if (__DEV__) {

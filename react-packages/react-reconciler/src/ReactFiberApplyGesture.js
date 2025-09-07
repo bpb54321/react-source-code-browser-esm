@@ -9,7 +9,7 @@
 
 import type {Fiber, FiberRoot} from './ReactInternalTypes.js';
 
-import type {Instance, TextInstance, Props} from './ReactFiberConfig.js';
+import type {Instance, TextInstance, Props} from './forks/ReactFiberConfig.dom.js';
 
 import type {OffscreenState} from './ReactFiberActivityComponent.js';
 
@@ -35,7 +35,7 @@ import {
   supportsSingletons,
   unhideInstance,
   unhideTextInstance,
-} from './ReactFiberConfig.js';
+} from './forks/ReactFiberConfig.dom.js';
 import {
   popMutationContext,
   pushMutationContext,

@@ -15,9 +15,9 @@ import type {
 } from './ReactInternalTypes.js';
 import type {RootTag} from './ReactRootTags.js';
 import type {Cache} from './ReactFiberCacheComponent.js';
-import type {Container} from './ReactFiberConfig.js';
+import type {Container} from './forks/ReactFiberConfig.dom.js';
 
-import {noTimeout} from './ReactFiberConfig.js';
+import {noTimeout} from './forks/ReactFiberConfig.dom.js';
 import {createHostRootFiber} from './ReactFiber.js';
 import {
   NoLane,

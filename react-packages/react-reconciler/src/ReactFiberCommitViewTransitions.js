@@ -7,7 +7,7 @@
  * @flow
  */
 
-import type {Instance, InstanceMeasurement, Props} from './ReactFiberConfig.js';
+import type {Instance, InstanceMeasurement, Props} from './forks/ReactFiberConfig.dom.js';
 import type {Fiber} from './ReactInternalTypes.js';
 import type {
   ViewTransitionProps,
@@ -35,7 +35,7 @@ import {
   hasInstanceChanged,
   hasInstanceAffectedParent,
   wasInstanceInViewport,
-} from './ReactFiberConfig.js';
+} from './forks/ReactFiberConfig.dom.js';
 import {scheduleViewTransitionEvent} from './ReactFiberWorkLoop.js';
 import {
   getViewTransitionName,

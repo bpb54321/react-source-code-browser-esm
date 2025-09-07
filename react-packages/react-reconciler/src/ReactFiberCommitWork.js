@@ -15,7 +15,7 @@ import type {
   HoistableRoot,
   FormInstance,
   Props,
-} from './ReactFiberConfig.js';
+} from './forks/ReactFiberConfig.dom.js';
 import type {Fiber, FiberRoot} from './ReactInternalTypes.js';
 import type {Lanes} from './ReactFiberLane.js';
 import {includesOnlyViewTransitionEligibleLanes} from './ReactFiberLane.js';
@@ -163,7 +163,7 @@ import {
   restoreRootViewTransitionName,
   isSingletonScope,
   updateFragmentInstanceFiber,
-} from './ReactFiberConfig.js';
+} from './forks/ReactFiberConfig.dom.js';
 import {
   captureCommitPhaseError,
   resolveRetryWakeable,

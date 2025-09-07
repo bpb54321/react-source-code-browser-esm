@@ -15,7 +15,7 @@ import type {
   SuspenseInstance,
   Container,
   HostContext,
-} from './ReactFiberConfig.js';
+} from './forks/ReactFiberConfig.dom.js';
 import type {SuspenseState} from './ReactFiberSuspenseComponent.js';
 import type {TreeContext} from './ReactFiberTreeContext.js';
 import type {CapturedValue} from './ReactCapturedValue.js';
@@ -58,7 +58,7 @@ import {
   isFormStateMarkerMatching,
   validateHydratableInstance,
   validateHydratableTextInstance,
-} from './ReactFiberConfig.js';
+} from './forks/ReactFiberConfig.dom.js';
 import {OffscreenLane} from './ReactFiberLane.js';
 import {
   getSuspendedTreeContext,

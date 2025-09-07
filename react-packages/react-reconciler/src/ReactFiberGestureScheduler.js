@@ -11,7 +11,7 @@ import type {FiberRoot} from './ReactInternalTypes.js';
 import type {
   GestureTimeline,
   RunningGestureTransition,
-} from './ReactFiberConfig.js';
+} from './forks/ReactFiberConfig.dom.js';
 
 import {
   GestureLane,
@@ -22,7 +22,7 @@ import {ensureRootIsScheduled} from './ReactFiberRootScheduler.js';
 import {
   subscribeToGestureDirection,
   stopGestureTransition,
-} from './ReactFiberConfig.js';
+} from './forks/ReactFiberConfig.dom.js';
 
 // This type keeps track of any scheduled or active gestures.
 export type ScheduledGesture = {

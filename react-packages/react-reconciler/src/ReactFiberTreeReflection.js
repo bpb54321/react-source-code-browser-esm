@@ -8,7 +8,7 @@
  */
 
 import type {Fiber} from './ReactInternalTypes.js';
-import type {Container, SuspenseInstance, Instance} from './ReactFiberConfig.js';
+import type {Container, SuspenseInstance, Instance} from './forks/ReactFiberConfig.dom.js';
 import type {SuspenseState} from './ReactFiberSuspenseComponent.js';
 
 import {

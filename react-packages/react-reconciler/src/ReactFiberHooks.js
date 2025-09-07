@@ -28,7 +28,7 @@ import type {
 import type {Lanes, Lane} from './ReactFiberLane.js';
 import type {HookFlags} from './ReactHookEffectTags.js';
 import type {Flags} from './ReactFiberFlags.js';
-import type {TransitionStatus, GestureTimeline} from './ReactFiberConfig.js';
+import type {TransitionStatus, GestureTimeline} from './forks/ReactFiberConfig.dom.js';
 import type {ScheduledGesture} from './ReactFiberGestureScheduler.js';
 
 import {
@@ -37,7 +37,7 @@ import {
   setCurrentUpdatePriority,
   getCurrentUpdatePriority,
   getCurrentGestureOffset,
-} from './ReactFiberConfig.js';
+} from './forks/ReactFiberConfig.dom.js';
 import ReactSharedInternals from 'shared/ReactSharedInternals.js';
 import {
   enableSchedulingProfiler,
