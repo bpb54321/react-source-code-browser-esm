@@ -1,1 +1,4 @@
 node_modules
+
+# transpiled React files
+react-dist
