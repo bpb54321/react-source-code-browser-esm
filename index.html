@@ -4,6 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>React source code browser ESM</title>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "/react-dist/react/index.js",
+          "react/jsx-runtime": "/react-dist/react/jsx-runtime.js",
+          "react/": "/react-dist/react/",
+          "react-client/": "/react-dist/react-client/",
+          "react-dom": "/react-dist/react-dom/index.js",
+          "react-dom/": "/react-dist/react-dom/",
+          "react-dom-bindings/": "/react-dist/react-dom-bindings/",
+          "react-reconciler/": "/react-dist/react-reconciler/",
+          "scheduler": "/react-dist/scheduler/index.js",
+          "scheduler/": "/react-dist/scheduler/",
+          "shared/": "/react-dist/shared/"
+        }
+      }
+    </script>
   </head>
   <body>
     <main id="root"></main>
