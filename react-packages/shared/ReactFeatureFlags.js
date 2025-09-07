@@ -80,6 +80,8 @@ export const enableYieldingBeforePassive = false;
 // Experiment to intentionally yield less to block high framerate animations.
 export const enableThrottledScheduling = false;
 
+const __EXPERIMENTAL__ = false;
+
 export const enableLegacyCache = __EXPERIMENTAL__;
 
 export const enableAsyncIterableChildren = __EXPERIMENTAL__;
@@ -239,6 +241,7 @@ export const disableTextareaChildren = false;
 // -----------------------------------------------------------------------------
 
 // Gather advanced timing metrics for Profiler subtrees.
+const __PROFILE__ = false;
 export const enableProfilerTimer = __PROFILE__;
 
 // Adds performance.measure() marks using Chrome extensions to allow formatted
