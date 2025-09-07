@@ -7,7 +7,7 @@
  * @flow
  */
 
-import reactDOMPackageVersion from 'shared/ReactVersion';
+import reactDOMPackageVersion from 'shared/ReactVersion.js';
 import * as IsomorphicReactPackage from 'react';
 
 export function ensureCorrectIsomorphicReactVersion() {

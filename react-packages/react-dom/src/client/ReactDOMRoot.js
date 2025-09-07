@@ -7,16 +7,16 @@
  * @flow
  */
 
-import type {ReactNodeList, ReactFormState} from 'shared/ReactTypes';
+import type {ReactNodeList, ReactFormState} from 'shared/ReactTypes.js';
 import type {
   FiberRoot,
   TransitionTracingCallbacks,
-} from 'react-reconciler/src/ReactInternalTypes';
+} from 'react-reconciler/src/ReactInternalTypes.js';
 
-import {isValidContainer} from 'react-dom-bindings/src/client/ReactDOMContainer';
-import {queueExplicitHydrationTarget} from 'react-dom-bindings/src/events/ReactDOMEventReplaying';
-import {REACT_ELEMENT_TYPE} from 'shared/ReactSymbols';
-import {disableCommentsAsDOMContainers} from 'shared/ReactFeatureFlags';
+import {isValidContainer} from 'react-dom-bindings/src/client/ReactDOMContainer.js';
+import {queueExplicitHydrationTarget} from 'react-dom-bindings/src/events/ReactDOMEventReplaying.js';
+import {REACT_ELEMENT_TYPE} from 'shared/ReactSymbols.js';
+import {disableCommentsAsDOMContainers} from 'shared/ReactFeatureFlags.js';
 
 export type RootType = {
   render(children: ReactNodeList): void,
@@ -75,9 +75,9 @@ import {
   isContainerMarkedAsRoot,
   markContainerAsRoot,
   unmarkContainerAsRoot,
-} from 'react-dom-bindings/src/client/ReactDOMComponentTree';
-import {listenToAllSupportedEvents} from 'react-dom-bindings/src/events/DOMPluginEventSystem';
-import {COMMENT_NODE} from 'react-dom-bindings/src/client/HTMLNodeType';
+} from 'react-dom-bindings/src/client/ReactDOMComponentTree.js';
+import {listenToAllSupportedEvents} from 'react-dom-bindings/src/events/DOMPluginEventSystem.js';
+import {COMMENT_NODE} from 'react-dom-bindings/src/client/HTMLNodeType.js';
 
 import {
   createContainer,
@@ -89,8 +89,8 @@ import {
   defaultOnUncaughtError,
   defaultOnCaughtError,
   defaultOnRecoverableError,
-} from 'react-reconciler/src/ReactFiberReconciler';
-import {ConcurrentRoot} from 'react-reconciler/src/ReactRootTags';
+} from 'react-reconciler/src/ReactFiberReconciler.js';
+import {ConcurrentRoot} from 'react-reconciler/src/ReactRootTags.js';
 
 // $FlowFixMe[missing-this-annot]
 function ReactDOMRoot(internalRoot: FiberRoot) {
