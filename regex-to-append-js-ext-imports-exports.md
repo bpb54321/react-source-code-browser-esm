@@ -11,45 +11,20 @@ Exceptions: I need to skip bare package specifiers, because I can use import map
 ```javascript
 // Example import and export statements where I'd like to append a .js at the end of the source specifier.
 
-// Before
-export { createRoot, hydrateRoot, version } from "./src/client/ReactDOMClient";
+import { getFiberCurrentPropsFromNode } from '../../client/ReactDOMComponentTree';
 
-// After
-export {
-  createRoot,
-  hydrateRoot,
-  version,
-} from "./src/client/ReactDOMClient.js";
+import {createRoot, hydrateRoot} from './ReactDOMRoot';
 
-// Before
-import { createRoot, hydrateRoot } from "./ReactDOMRoot";
-
-// After
-import { createRoot, hydrateRoot } from "./ReactDOMRoot.js";
-
-// Before
 import {
   injectIntoDevTools,
   findHostInstance,
-} from "react-reconciler/src/ReactFiberReconciler";
+} from 'react-reconciler/src/ReactFiberReconciler';
+import {canUseDOM} from 'shared/ExecutionEnvironment';
 
-// After
-import {
-  injectIntoDevTools,
-  findHostInstance,
-} from "react-reconciler/src/ReactFiberReconciler.js";
+# Already has .js extension
+import ReactVersion from 'shared/ReactVersion.js';
 
-// Exceptions
-
-// When a source specifier is just a single package, as in the following examples, I don't want to append the .js to the end of the source specifier.
-
-// Examples
-import * as IsomorphicReactPackage from "react"; // Leave this untouched
-
-// If a source specifier already has .js file extension, ignore
-// This prevents multiple extensions .js.js.js from being appended on multiple Find and Replace operations
-
-import { createRoot, hydrateRoot } from "./ReactDOMRoot.js"; // Leave this untouched
+import Internals from 'shared/ReactDOMSharedInternals';
 ```
 
 ## Solution
