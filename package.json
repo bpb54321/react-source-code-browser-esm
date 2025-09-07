@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "transpile-react": "babel react-packages/ -d react-dist/ --config-file ./babel.react.config.json"
+    "transpile-react": "babel react-packages/ -d react-dist/ --config-file ./babel.react.config.json",
+    "transpile-app": "babel src/ -d app-dist/ --config-file ./babel.app.config.json"
   },
   "author": "",
   "license": "ISC",
@@ -11,6 +12,7 @@
   "devDependencies": {
     "@babel/cli": "^7.28.3",
     "@babel/core": "^7.28.3",
-    "@babel/preset-flow": "^7.27.1"
+    "@babel/preset-flow": "^7.27.1",
+    "@babel/preset-react": "^7.27.1"
   }
 }
