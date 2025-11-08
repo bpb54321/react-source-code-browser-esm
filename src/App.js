@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function App() {
   const [count, setCount] = useState(0);
@@ -7,6 +7,9 @@ export default function App() {
       return count + 1;
     });
   };
+  useEffect(() => {
+    console.log(`updated count: ${count}`)
+  }, [count])
 
   return (
     <div>
