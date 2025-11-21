@@ -2,6 +2,8 @@ import { useState } from "react";
 
 export function Counter(props) {
     const [numOfClicks, setNumOfClicks] = useState(0);
+    const [firstName, setFirstName] = useState("Brian");
+    const [lastName, setLastName] = useState("Blosser");
 
     const handleClick = () => {
         setNumOfClicks(numOfClicks + 1)

@@ -3,5 +3,6 @@ import App from './App.js'
 
 const rootElement = document.getElementById("root");
 const reactRoot = createRoot(rootElement);
+console.log({reactRoot})
 const appElement = <App />;
 reactRoot.render(appElement);
