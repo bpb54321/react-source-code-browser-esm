@@ -1,5 +1,6 @@
 {
   "presets": ["@babel/preset-flow"],
   "sourceMaps": false,
+  "retainLines": true,
   "ignore": ["**/__tests__"]
 }
